@@ -7,73 +7,88 @@
     tools:context=".ui.home.HomeFragment">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/icon"
         android:layout_width="91dp"
         android:layout_height="0dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="32dp"
-        android:contentDescription="Icon of Pocket Budget"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:contentDescription="@string/icon_of_pocket_budget_descr"
+        app:layout_constraintBottom_toTopOf="@+id/pocket_budget"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pocket_budget_icon" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/pocket_budget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
         android:fontFamily="@font/raleway_bold"
-        android:text="Pocket Budget"
+        android:text="@string/app_name"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/autoCompleteTextView2"
+        app:layout_constraintBottom_toTopOf="@+id/category"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/icon" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/log"
         style="@style/Button"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginBottom="208dp"
-        android:text="Log Expense"
+        android:text="@string/log_expense"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/amount" />
 
     <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextView2"
+        android:id="@+id/category"
         style="@style/TextInput"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginBottom="22dp"
         android:dropDownHeight="wrap_content"
-        android:hint="category"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText2"
+        android:hint="@string/category_hint"
+        app:layout_constraintBottom_toTopOf="@+id/amount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/pocket_budget" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/amount"
         style="@style/TextInput"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginBottom="63dp"
         android:ems="10"
-        android:hint="amount"
+        android:hint="@string/amount_hint"
         android:inputType="numberDecimal|phone"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/log"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView2" />
+        app:layout_constraintTop_toBottomOf="@+id/category" />
+
+    <TextView
+        android:id="@+id/budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_bold"
+        android:text="0,00 € / 15,25 €"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/log"
+        app:layout_constraintVertical_bias="0.305" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
